@@ -24,9 +24,27 @@
         <ol type="a"><!--ul crea lista ordenada y ol lista desordenada con ol puede escribir el type para enmera o ordenar como prefieras-->
             
             <li id="accion">accion</li> <!--li especifica los items-->
+
+            <!--INSERTAR IMAGEN con alt se le pone descripcion a la imagen con width para ponerel mamaño de la image con title es pa poner un titulo al momento de pasar el mouse en la imagen -->
+            <img src="77rb.gif" alt="Imagen-accion" width="300"  title="accion online">
+            <br>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, numquam facere iste enim quia dolorum tempora debitis harum tenetur omnis ratione necessitatibus modi voluptatibus eius laborum ipsum quo id pariatur.</p>
+
             <li id="cficcion">ciencia ficcion</li>
+
+            <img src="https://es.web.img3.acsta.net/newsv7/21/02/12/11/48/0062650.jpg" alt="ciencia ficcion" usemap="#PeliMapa">
+            <!--la etiqueta map es para al darle click a un elemento de la imagen de mande a la pagina de ese elemento para saber cordenada lo puedes hacer con herramienta online https://www.image-map.net/ -->
+            <map name="PeliMapa">
+                <area shape="rect" coords="1,5,424,719" href="https://www.youtube.com/watch?v=VGRaBxmdLbQ" alt="aniquilacion">
+
+                <area shape="rect" coords="428,-1,853,719" href="https://www.youtube.com/watch?v=gCcx85zbxz4" alt="BladeRunner">
+
+                <area shape="rect" coords="852,-1,1277,719" href="https://www.youtube.com/watch?v=NNrK7xVG3PM" alt="Valerian">
+            </map>
+
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui accusantium possimus autem nobis officiis perferendis modi numquam? Sed libero quibusdam beatae aliquid autem, iste dicta quasi dignissimos incidunt quae. Inventore?</p>
+
             <li id="terror">terror</li>
             <p>Lorem ipsum <a href="https://medlineplus.gov/images/Pain_share.jpg">dolor</a> sit amet consectetur adipisicing elit. Corrupti odit, quaerat facilis, veritatis modi doloremque quae sint nostrum aut, voluptatum quasi impedit. Maiores, fuga dolorem a tempora laborum explicabo vero?</p>
         
@@ -42,9 +60,39 @@
                 <dd>Son video o film cortos por lo general duran 5 minutos</dd>
         </dl>
 
-        <a href="#qpelis">Ir arriba </a>
+        
+    </section>
+    <section>
+        <!--CREAR TABLAS CON HTML-->
+        <h2>Tablas</h2>
+        <table border="1"><!--etiqueta para crear tabla-->
+            <tr>
+                <th colspan="7">PELICULAS</th> <!--con colspan es para expandir el titulo entre las 7 columnas-->
+            </tr>
+            <tr>
+                <th>lunes</th> <!--th es para titulo de la tabla-->
+                <th>martes</th>
+                <th>miercoles</th>
+                <th>jueves</th>
+                <th>viernes</th>
+                <th>sabado</th>
+                <th>domingo</th>
+            </tr>
+            <tr>
+                <td>valerian</td><!--td para el contenido de la tabla-->
+                <td>bladerunner</td>
+                <td>aniquilacion</td>
+                <td>matrix</td>
+                <td>guerra del mañana</td>
+                <td>descando</td>
+                <td>descanso</td>
+            </tr>
+        </table>
+
+
     </section>
     
+    <a href="#qpelis">Ir arriba </a>
     <footer>todos los derechos reservados</footer>
 </body>
 </html>
