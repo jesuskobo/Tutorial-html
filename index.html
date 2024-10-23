@@ -100,8 +100,104 @@
                 <td>descanso</td>
             </tr>
         </table>
+    </section>
 
+    <section>
+        <!-- tutuorial formulario para repasar si necesitas:  https://www.youtube.com/watch?v=cX7Pml5ZM84&list=PLJubkp8BnTJtjPikTnv8JoYWKFjUu7bRH-->
+        <!--FORMULARIOS-->
+        <h2>FORMULARIOS</h2>
+        <!--en action se pone la informacion donde se va a enviar el formulario en el backend-->
+        <form action="mibackend" method="post">
+            <label for="nombre">Usuario</label><!--n el for hace referencia al id del input-->
+            <br>
+            <!--PLACEHOLEDR: es para mosotrar en la barra un indicativo de que debe poner
+            Requeried: es para poner indica que ese campo no se debe dejar vacio
+            autofocus: es para resaltar donde debe empezar el usuario a llenar el formulario cuando se ingresa a la pagina o recarga -->
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu usuario" required autofocus>
+            <br>
 
+            <label for="contra">contraseña</label>
+            <br>
+            <input type="password" id="contra" placeholder="Ingrese aqui su contraseña" required>
+            <br>
+
+            <fieldset><!--para encerrar el formulario-->
+                <legend>TIPOS DE ENTRADA DE DATOS</legend>
+                <label for="nombre">Usuario</label>
+                <br>
+                <input type="text" id="nombre" name="nombre">
+                <!--name es para enviar datos al servidor o backend-->
+                <br>
+
+                <label for="correo">correo</label>
+                <br>
+                <input type="email" id="correo" name="email">
+                <br>
+
+                <label for="contra">contraseña</label>
+                <br>
+                <input type="password" id="contra" name="password">
+                <br>
+                
+                <label for="cumple">cumpleaños</label>
+                <br>
+                <input type="date" id="cumple" name="fecha">
+                <br>
+
+                <label for="CV">Ingresa tu CV</label>
+                <br>
+                <input type="file" id="CV" name="archivo">
+                <br>
+                
+                <label for="descri">Descripcion</label>
+                <br>
+                <!-- cols y rows es el tamaño del alto y ancho-->
+                <textarea name="descripcion" id="descri" cols="30" rows="10"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Color favorito</legend>
+                <!--Name= como todas los input tiene el mismo NAME obliga a seleccionar solo una opcion
+                VALUE= es para enviar el name al backend pero con otro valor en este caso el valor cada color-->
+                <input type="radio" id="red" name="color" value="red">
+                <label for="red">Rojo</label>
+                <br>
+
+                <input type="radio" id="blue" name="color" value="blue">
+                <label for="blue">Azul</label>
+                <br>
+
+                <input type="radio" id="gren" name="color" value="gren">
+                <label for="gren">Verde</label>
+                <br>
+
+                <label for="colors">Paleta color</label>
+                <input type="color" id="colors">
+                <br>
+
+                <!--para mostrar un lista y que selecciones un elemento-->
+                <select name="colors2" id="color2">
+                    <option value="blue">azul</option>
+                    <option value="darck">Negro</option>
+                    <option value="red">rojo</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>USAR CHECK</legend>
+                <input type="checkbox" name="film" id="pelicula" value="pelicula">
+                <label for="pelis">Pelicula</label>
+            
+                <input type="checkbox" name="film" id="serie" value="series">
+                <label for="serie">Series</label>
+
+                <input type="checkbox" name="film" id="corto" value="corto">
+                <label for="corto">Cortos</label>
+
+                <input type="submit" value="Enviar"> <!--el sumbmit envia datos al action en la etiqueta form que a su vez envia al backend-->
+            </fieldset>
+
+        </form>
     </section>
     
     <a href="#qpelis">Ir arriba </a>
