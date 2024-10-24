@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icono.png">
     <title>Qpelis - peliculas</title>
 </head>
 <body>
@@ -100,6 +101,26 @@
                 <td>descanso</td>
             </tr>
         </table>
+    </section>
+    <section>
+        <h2>AUDIO Y VIDEO</h2>
+        <!--controls para mostrar controles del audio
+        autoplay:para que suene al ingresar co recargar pagina
+        loop: para que el audito se reprodusca en bucle
+        muted: para mutear sonido-->
+        <AUdio controls autoplay>
+            <source src="piponas.mp3" type="audio/mp3"></source>
+        </AUdio>
+        <audio src="piponas.mp3" controls></audio>
+
+        <video src="FDSR.mp4" controls muted></video><!--metodo corto-->
+        <video controls><!--metodo extendido-->
+            <source src="FDSR.mp4" >
+            el navegador no puede reproducir video.
+        </video>
+        <!--poner video de youtube-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2WrOaA7QCM4?si=g_e0bkTWa53fIWV2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
     </section>
 
     <section>
@@ -199,6 +220,20 @@
 
         </form>
     </section>
+
+    <section>
+        <h2>GRAFICOS SVG</h2>
+        <svg width="500" height="500">
+            <circle cx="110" cy="110" r="100" stroke="blue"     stroke-width="5"></circle>
+
+            <line x1="110" y1="110" x2="250" y2="110" stroke="blue" stroke-width="5" />
+
+            <text x="110" y="100" fill="blue">radio =100</text>
+
+        </svg>
+    </section>
+  
+    
     
     <a href="#qpelis">Ir arriba </a>
     <footer>todos los derechos reservados</footer>
