@@ -1,0 +1,70 @@
+
+/* importar tipografia de google*/
+@import url('https://fonts.googleapis.com/css2?family=Danfo&display=swap');
+
+#rgb { 
+    background-color: rgb(red, rgb(167, 88, 88)), rgb(244, 208, 208));
+    
+
+}
+ /* para trabajar con id se llaman con # */
+#colors {
+    color: brown;
+}
+
+/*para trabajar o llamar clases con un punto . */
+.brown {
+    color: aquamarine;
+}
+
+
+#saludo {
+    font-family: "Danfo", serif;
+    font-size: 50px; /* tapaño de texto */
+    text-align: center; /* alineacion del texto si derecha centro o mitad*/
+    color: blueviolet;
+    text-shadow: 5px 5px 10px black;/* para poner sobra  5px derecha 5px abajo 10px de difuminado*/
+}
+
+p{
+    font-size: 20; /* tamaño de letra*/
+    text-align: justify;
+    width: 80% ;
+    margin-left: auto; /*ajusta autormaticamente izquierda*/
+    margin-right: auto;/*ajusta autormaticamente derecha*/
+}
+/* Buscar primera letra del parrafo cambia la primera letra de parrafo por eso se usa una clase con nombre CAPITAL solo para el primer parrafo*/
+p.capital::first-letter{
+    color: black;
+    font-size: 80px;
+    float: left; /* para que se auto ajuste al parrafo unque toca retocarla*/
+    background-color: rgb(170, 114, 222);
+    margin-right: 5px;
+    margin-top: 5px;
+}
+a{
+    text-decoration: none; /* quita el subrayado */
+    color: darkmagenta;
+    text-transform: uppercase; /* poner el mayuscula el texto*/
+    font-weight: bold; */ poner en negrilla o mas oscuro si es el caso de otro color*/
+
+}
+
+/*seudoclases hover para que el elemento cambie cuando se pasa el raton o mouse*/
+
+a:hover{
+    color: darkblue;
+    
+}
+
+.prueba{
+    text-decoration: underline; /* para resaltar un texto*/
+}
+
+.mrborder{
+    border: 5px dashed rgb(151, 2, 151);
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
