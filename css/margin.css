@@ -1,0 +1,30 @@
+body{
+    background-image: url("https://cdn.domestika.org/c_fill,dpr_auto,f_auto,q_auto,w_1200/v1609416599/blog-post-open-graph-covers/000/004/985/4985-original.jpg?1609416599");
+    background-color: rgba(1, 35, 51, 0.5); /* Ajusta la opacidad aquí */
+    background-blend-mode: overlay; /* Combina el color con la imagen */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-size: 2rem;
+}
+
+.menu{
+    background-color: rgb(107, 196, 211);
+    display:inline-flex ;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+}
+
+.menu a:hover{
+    background-color: aqua;
+    color: black;
+}
+
+/* para dejar la clase activa como si estuviera el hover
+sirve para indicar la pagina en que estas parado*/
+.menu a.activo{
+    background-color: aqua;
+    color: black;
+}
