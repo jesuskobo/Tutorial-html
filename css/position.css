@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    background-color: skyblue;
+}   
+
+div{
+    padding: 5px;
+}
+
+/* static es la positi estatica no varia */
+.static{
+    background-color: darkcyan;
+    position: static;
+}
+
+/* para comenta un linea de codigo es con control + k control+c
+para descomentar control + k y control +u */
+.relative{
+    background-color: aquamarine;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+/* se mueve 30px dentro del bloque body  si etuviera en otro bloque ejemplo dentro del bloque realite se moviera 30px dentro del bloque relative */
+.absolute{
+    background-color: cadetblue;
+    position: absolute;
+    top: 33px;
+    left: 30px;
+}
+
+/* sticky ubica el bloque en la parte superior */
+/* tambien cuando se desplaza hacia cabjo o se hace scro queda fija en la pantalla se utiliza bastante en los menu de arriba */
+
+/* sticky en CSS es una combinación de los posicionamientos relativo y fijo. Se utiliza para que un elemento se posicione en un lugar específico de forma fija, pero solo en un momento o a una altura determinada. */
+.sticky{
+    background-color: rgb(9, 85, 135);
+    position: sticky;
+    top: 50px;
+}
+
+/* este es un simple espacio para mostrar lo que hace sticky */
+.espacio{
+    background-color: cyan;
+    height: 1000px;
+}
+
+/* FIXED: permite que un elemento se posicione en relación con el viewport del navegador y se mantenga en ese lugar, incluso cuando el usuario hace scroll en la página */
+.fixed{
+    background-color: rgb(109, 130, 5);
+    width: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
