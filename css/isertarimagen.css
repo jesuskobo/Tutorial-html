@@ -1,0 +1,32 @@
+/* SERVICIO EN LINEA
+FUENTE: GOOGLE FONTS
+ICONOS: FONT AWESOME
+IMAGENES: UNPLASH.COM */
+
+body{
+    background-color: teal;
+    background-image: url("https://images.unsplash.com/photo-1642706629725-25b01ab2eabb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+}
+
+.photo{
+    width: 500px;
+    height: 700px;
+    background-repeat: no-repeat;
+    border: 2px solid rgba(0, 0, 0, 0.278);
+    background: linear-gradient(to right,rgba(0, 128, 0, 0.132), rgba(0, 0, 255, 0.148)), url("https://images.unsplash.com/photo-1484406566174-9da000fda645?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFuaW1hbHxlbnwwfHwwfHx8MA%3D%3D");
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.perfil{
+    background-image: url("https://images.unsplash.com/photo-1533689476487-034f57831a58?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww");
+    width: 150px; /* crea dimesiones */
+    height: 150px;
+    /* FIXED: permite que un elemento se posicione en relación con el viewport del navegador y se mantenga en ese lugar, incluso cuando el usuario hace scroll en la página */
+    position: fixed;
+    top: 0;/* mueve imagen arriba*/
+    right: 0;/*mueve imagen a la derecha*/
+    background-position: 49% 50%; /*centra el elemento de la imagen*/
+    border-radius: 50%; /*redondea la imagen*/
+}
