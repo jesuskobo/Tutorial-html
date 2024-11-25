@@ -1,0 +1,20 @@
+html {
+    margin: 0;               /* Elimina márgenes predeterminados */
+    padding: 0;              /* Elimina rellenos predeterminados */
+    height: 100%;            /* Asegura que el body y html ocupen el 100% de la pantalla */
+    display: flex;           /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente el recuadro */
+    align-items: center;     /* Centra verticalmente el recuadro */
+    background: linear-gradient(to right, black, red); /* Fondo del body */
+}
+
+body {
+
+    position: relative;
+    border: solid blanchedalmond;
+    color: rgb(244, 177, 190);
+    font-size: 20px;
+    padding: 20px;
+    height: 50%;
+    width: 50%;
+}
