@@ -251,38 +251,126 @@ let arreglo =new Array(); vieja forma de declararlo
 
 //+++++++++++++++CLASES EN JAVASCRIPT+++++++++++++++++
 
-class Player{
-    constructor(nombre, colorSombrero){
-        this._nombre = nombre;
-        this._colorSombrero = colorSombrero;
-    }
-    //Metodos
-    saltar(){}
-    correr(){}
-    saludar(){
-        return `hola mi nombre es ${this._nombre} y mi sombrero es ${this._colorSombrero}`
-    }
+// class Player{
+//     constructor(nombre, colorSombrero){
+//         this._nombre = nombre;
+//         this._colorSombrero = colorSombrero;
+//     }
+//     //Metodos
+//     //los metodos no se declaran como con function como en python
+//     saltar(){
+//         return  `hola mi nombre es ${this._nombre} y estoy saltando`
+//     }
+//     correr(){}
+//     saludar(){
+//         return `hola mi nombre es ${this._nombre} y mi sombrero es ${this._colorSombrero}`
+//     }
 
-    //obtener atributo 
-    get nombre(){
-        return this._nombre;
+//     //obtener atributo 
+//     get nombre(){
+//         return this._nombre;
+//     }
+//     // cambiar atributo es como el setter en python
+//     set nombre(NuevoNombre){
+//         this._nombre =NuevoNombre
+//     }
+// }
+
+// //crear objeto
+// let player1 = new Player('Mario', "Rojo")
+// let player2 = new Player('Luigi', "Verde")
+
+// console.log(player1.saludar())
+// console.log(player2.saludar())
+
+// //GET: muestra un el el atributo de la clase
+// console.log(player1.nombre)
+
+// //SET: cambia un atributo de una clase
+// player1.nombre = 'Alberto'
+// console.log(player1.nombre)
+
+// //+++++++++++SUBCLASE++++++++++++++++
+
+// // se declara la clase hija y con extendeds se llama a la clase padre
+// //En super indica los atributos que se van a heredar de la clase padre
+// class Mascota  extends Player{
+//     constructor(nombre, colorSombrero, colorPiel){
+//         super(nombre, colorSombrero);
+//         this._colorPiel =colorPiel;
+//     }
+//     get colorPiel(){
+//         return this._colorPiel
+//     }
+//     set colorPiel(nuevoAtributo){
+//         this._colorPiel = nuevoAtributo
+//     }
+//     //se puede concatenar el metodo de la clase padre con la hija ej:
+//     saltar(){
+//         return super.saltar() + ` con el sombrero ${this._colorSombrero} en la mano`
+//     }
+
+// }
+
+// let pet1 = new Mascota("yoshi", "invisible", "verde")
+
+// console.log(pet1)
+// //GET
+// console.log(pet1.colorPiel)
+// //SET
+// pet1._nombre = "rufus"
+// console.log(pet1.nombre)
+// //saludo eredado de la clase padre
+// console.log(pet1.saludar())
+// //concatenar metodos
+// console.log(pet1.saltar())
+
+//+++atributo y metodos estaticos+++
+
+class Mascota{
+    //atributo estatico se crea con static y son mas comunes para contador
+    static cola = "larga"
+    static contadorMascota = 0
+
+    constructor(nombre, edad) {
+        this._nombre = nombre
+        this._edad = edad
+        this._numero = ++Mascota.contadorMascota // cada vez que se cree un objeto se agrega 1 al contador mascota
     }
-    // cambiar atributo es como el setter en python
-    set nombre(NuevoNombre){
-        this._nombre =NuevoNombre
+    //Metodos estaticos
+    static saludo(){
+        return 'mover cola'
     }
 }
 
-//crear objeto
-let player1 = new Player('Mario', "Rojo")
-let player2 = new Player('Luigi', "Verde")
+let mascota1 = new Mascota("perro", 5)
+let mascota2 = new Mascota("gato", 3)
+let mascota3 = new Mascota("lobo", 2)
 
-console.log(player1.saludar())
-console.log(player2.saludar())
+// para llamar el atributo statico se llama con el nombre de la clase no con el objeto punto nombreDelAtributo
+console.log(Mascota.cola) 
+console.log(Mascota.contadorMascota)
 
-//GET: muestra un el el atributo de la clase
-console.log(player1.nombre)
+// para llamar el METODO statico se llama con el nombre de la clase no con el objeto punto nombreDelMetodo
+console.log(Mascota.saludo())
 
-//SET: cambia un atributo de una clase
-player1.nombre = 'Alberto'
-console.log(player1.nombre)
+//herencia de atributos y metotos estaticos
+class Firulais extends Mascota{
+    constructor(nombre, edad, raza) {
+        super(nombre, edad);
+        this._raza = raza        
+    }
+    get raza (){
+        return this._raza
+    }
+}
+
+MyDog = new Firulais("osi", 4, "chandita")
+//El contados aumenta si se crea metodo en la clase hija
+//Se recuerda que los metodo y areibutos estaticos se llaman  primero con la clase.nombreDelMetodo o tributo
+console.log(Firulais.contadorMascota)
+//metodo no estatico
+console.log(MyDog.raza)
+
+
+
