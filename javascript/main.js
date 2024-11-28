@@ -3,11 +3,30 @@
 Variables tipos de datos:
 
 let Nombrevariable = "contenido"
+//declarar 2 o mas variables en la misma linea
+let [i, j] =["jesus", "rivera"]
 
 
 funciones
 prompt : para solicitar escrbir algo en el navegador es como el input de python pero en el navegador, pero este siempre trae es un string si se quiere un numero se requiere convertir ej:
 let numero = number(prompt("ingrese numero"))
+
+.split() : Divide la cadena en palabras por los espacios si se utiliza espacio ej: .split(" ")
+.join() : une los elementos de un arreglo en una cadena, usando un delimitador opcional (por defecto es una coma , etc).
+.lenght : Te da la longitud de una cadena o arreglo
+.Object.entries(diccionario) : te devuelve un arreglo de pares clave-valor de un objeto.
+.toUpperCase() : Convierte todos los caracteres de una cadena a mayúsculas.
+.toLowerCase() : Convierte todos los caracteres de una cadena a minúsculas.
+.indexOf() te da el índice de un elemento en una cadena, o -1 si no la encuentra.
+.replace() Reemplaza la primera ocurrencia de una subcadena con otra.EJ:
+        let texto = "Hola, ¿cómo estás?";
+        console.log(texto.replace("Hola", "Adiós")); // "Adiós, ¿cómo estás?"
+.slice() Extrae una parte de la cadena, entre dos índices. ej:
+        let texto = "Hola, ¿cómo estás?";
+        console.log(texto.slice(0, 4)); // "Hola"
+.trim() Elimina los espacios en blanco al principio y al final de la cadena.
+
+
 
 */
 //let userAge = prompt("ingrese su edad por favor")
@@ -325,52 +344,101 @@ let arreglo =new Array(); vieja forma de declararlo
 // //concatenar metodos
 // console.log(pet1.saltar())
 
-//+++atributo y metodos estaticos+++
+// //+++atributo y metodos estaticos+++
 
-class Mascota{
-    //atributo estatico se crea con static y son mas comunes para contador
-    static cola = "larga"
-    static contadorMascota = 0
+// class Mascota{
+//     //atributo estatico se crea con static y son mas comunes para contador
+//     static cola = "larga"
+//     static contadorMascota = 0
 
-    constructor(nombre, edad) {
-        this._nombre = nombre
-        this._edad = edad
-        this._numero = ++Mascota.contadorMascota // cada vez que se cree un objeto se agrega 1 al contador mascota
+//     constructor(nombre, edad) {
+//         this._nombre = nombre
+//         this._edad = edad
+//         this._numero = ++Mascota.contadorMascota // cada vez que se cree un objeto se agrega 1 al contador mascota
+//     }
+//     //Metodos estaticos
+//     static saludo(){
+//         return 'mover cola'
+//     }
+// }
+
+// let mascota1 = new Mascota("perro", 5)
+// let mascota2 = new Mascota("gato", 3)
+// let mascota3 = new Mascota("lobo", 2)
+
+// // para llamar el atributo statico se llama con el nombre de la clase no con el objeto punto nombreDelAtributo
+// console.log(Mascota.cola) 
+// console.log(Mascota.contadorMascota)
+
+// // para llamar el METODO statico se llama con el nombre de la clase no con el objeto punto nombreDelMetodo
+// console.log(Mascota.saludo())
+
+// //herencia de atributos y metotos estaticos
+// class Firulais extends Mascota{
+//     constructor(nombre, edad, raza) {
+//         super(nombre, edad);
+//         this._raza = raza        
+//     }
+//     get raza (){
+//         return this._raza
+//     }
+// }
+
+// MyDog = new Firulais("osi", 4, "chandita")
+// //El contados aumenta si se crea metodo en la clase hija
+// //Se recuerda que los metodo y areibutos estaticos se llaman  primero con la clase.nombreDelMetodo o tributo
+// console.log(Firulais.contadorMascota)
+// //metodo no estatico
+// console.log(MyDog.raza)
+
+
+// ++++++++++IMPORTA Y EXPORTAR+++++++++++
+// Para importar area del arhivo funciones se hace asi
+// se recuerda que para ver esto es desde el navegador y debe estar corriendo el archivo en un servidor po ejemplo en xampp o el que instale LIVE SERVER
+// import { area, suma } from "./funciones.js";
+
+
+// console.log(area(10))
+// console.log(suma(5, 5))
+
+//**exportar e import clases */
+/*
+import { Pokemon } from "./funciones.js"
+
+let poke = new Pokemon("pikachu", 5, "amarillo")
+console.log(Pokemon.vida)
+console.log(poke._color)
+console.log(poke.ataque())
+
+class Charizar extends Pokemon{
+    constructor(TipoPokemon, edad, color, poder) {
+        super(TipoPokemon, edad, color)
+        this._poder =poder
     }
-    //Metodos estaticos
-    static saludo(){
-        return 'mover cola'
+
+    Ataque(){
+        return `El pokemon ${this._tipoPokemon} ataca con un ${this._poder}`
     }
 }
 
-let mascota1 = new Mascota("perro", 5)
-let mascota2 = new Mascota("gato", 3)
-let mascota3 = new Mascota("lobo", 2)
+let pok = new Charizar("charizarcito", 5, "naranja", "fuego")
+console.log(pok.Ataque())
+console.log(Pokemon.vida)  */
 
-// para llamar el atributo statico se llama con el nombre de la clase no con el objeto punto nombreDelAtributo
-console.log(Mascota.cola) 
-console.log(Mascota.contadorMascota)
-
-// para llamar el METODO statico se llama con el nombre de la clase no con el objeto punto nombreDelMetodo
-console.log(Mascota.saludo())
-
-//herencia de atributos y metotos estaticos
-class Firulais extends Mascota{
-    constructor(nombre, edad, raza) {
-        super(nombre, edad);
-        this._raza = raza        
+function devolver (Frase){
+    let pal = Frase.split(" ")
+    let diccionario ={}
+    
+    for (let palabra of pal){
+        diccionario[palabra] = palabra.split().join().length
     }
-    get raza (){
-        return this._raza
+    console.log(diccionario)
+    
+    // console.log(diccionario)
+    for (let [clave, valor] of Object.entries(diccionario)){
+        console.log( `la clave: ${clave}, Valor ${valor}`)
     }
 }
 
-MyDog = new Firulais("osi", 4, "chandita")
-//El contados aumenta si se crea metodo en la clase hija
-//Se recuerda que los metodo y areibutos estaticos se llaman  primero con la clase.nombreDelMetodo o tributo
-console.log(Firulais.contadorMascota)
-//metodo no estatico
-console.log(MyDog.raza)
-
-
+console.log(devolver("me rasca la bola izquierda"))
 
