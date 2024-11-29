@@ -226,11 +226,45 @@ let arreglo =new Array(); vieja forma de declararlo
 // function MultiplicacionNumeros(num1, num2){
 //     let Multi = num1 * num2
 //     return(Multi);
-
 // }
+
+// //ejem2:
+// function devolver (Frase){
+//     let pal = Frase.split(" ")
+//     let diccionario ={}
+
+//     for (let palabra of pal){
+//         diccionario[palabra] = palabra.split().join().length
+//     }
+//     console.log(diccionario)
+
+//     // console.log(diccionario)
+//     for (let [clave, valor] of Object.entries(diccionario)){
+//         console.log( `la clave: ${clave}, Valor ${valor}`)
+//     }
+// }
+
+// console.log(devolver("me rasca la bola izquierda"))
 // document.write(MultiplicacionNumeros(5, 5)); // o llamando la funcion desde document.write
 
+// //Otra forma de hacer una funcion
+
+// let saludo = function(nombre){
+//     return `hola ${nombre} como estas`
+// }
+
+// console.log(saludo("David"))
+
+//++++++++++++FUNCIONES FLECHA es como la funcion lambda en pytho++++++++++++
+// ejemplo 1
+// let saludo = nombre => `hola ${nombre}`
+// console.log(saludo("jesus"))
+// // ejemplo 2
+// let suma = (x, y) => x + y;
+// console.log(suma(5, 5))
+
 //++++++++OBJETOS EN JAVASCRIPT es casi igual a diccionario en python+++++++++
+
 // pero los objetos son diferentes en python que en javascript en java script son mas acesibles en teoria no es lo misma
 
 // let frutas = {
@@ -285,7 +319,7 @@ let arreglo =new Array(); vieja forma de declararlo
 //         return `hola mi nombre es ${this._nombre} y mi sombrero es ${this._colorSombrero}`
 //     }
 
-//     //obtener atributo 
+//     //obtener atributo
 //     get nombre(){
 //         return this._nombre;
 //     }
@@ -367,7 +401,7 @@ let arreglo =new Array(); vieja forma de declararlo
 // let mascota3 = new Mascota("lobo", 2)
 
 // // para llamar el atributo statico se llama con el nombre de la clase no con el objeto punto nombreDelAtributo
-// console.log(Mascota.cola) 
+// console.log(Mascota.cola)
 // console.log(Mascota.contadorMascota)
 
 // // para llamar el METODO statico se llama con el nombre de la clase no con el objeto punto nombreDelMetodo
@@ -377,7 +411,7 @@ let arreglo =new Array(); vieja forma de declararlo
 // class Firulais extends Mascota{
 //     constructor(nombre, edad, raza) {
 //         super(nombre, edad);
-//         this._raza = raza        
+//         this._raza = raza
 //     }
 //     get raza (){
 //         return this._raza
@@ -425,20 +459,52 @@ let pok = new Charizar("charizarcito", 5, "naranja", "fuego")
 console.log(pok.Ataque())
 console.log(Pokemon.vida)  */
 
-function devolver (Frase){
-    let pal = Frase.split(" ")
-    let diccionario ={}
-    
-    for (let palabra of pal){
-        diccionario[palabra] = palabra.split().join().length
-    }
-    console.log(diccionario)
-    
-    // console.log(diccionario)
-    for (let [clave, valor] of Object.entries(diccionario)){
-        console.log( `la clave: ${clave}, Valor ${valor}`)
-    }
-}
+// //+++++++++++USO DE FECHAS EN JAVASCRIPT +++++++++++++++
 
-console.log(devolver("me rasca la bola izquierda"))
+// //Objeto Date
+
+// let fechaActual = new Date();
+
+// console.log(fechaActual)
+// console.log(fechaActual.getDate()) //obtener el dia
+// console.log(fechaActual.getMonth()) //obtener mes empieza desde 0
+// console.log(fechaActual.getFullYear()) //obtener el año
+// console.log(fechaActual.getDay()) //Dia de la semana empieza en 0 desde el domingo
+
+// //TIMESTAMP: 01 de enero  1970 -> actualidad, es decir numero de dias desde ese año hasta ahora
+// console.log(fechaActual.getTime())
+
+// // Fecha con parametros
+
+// let FechaConParametros = new Date(2021, 6, 10) // como minimo debe ingresar mes y año
+// console.log(FechaConParametros)
+// FechaConParametros.setFullYear(1999) //poner año en especifico
+// console.log(FechaConParametros)
+
+// //mostrar hora
+// let hora = new Date();
+// console.log(hora.getHours())
+// console.log(hora.toLocaleTimeString())
+
+// //++++SETTIMEHOUT++++
+// //Se utiliza para ejecutar funcion despues de un tiempo establecido es como el return pero con tiempo establecido
+// function saludo (nombre){
+//     console.log(`hola ${nombre}, buenos dias`)
+// }
+// //setTimeout(funcion, time, argumentoDefuncion1, arg2)
+// let temporizador = setTimeout(saludo, 2000, "Jesus")
+// clearTimeout(temporizador) //detener el setimeout
+
+// //+++++SETINTERVAL++++ Ejecuta funcion cada cierto tiempo
+
+// // setInterval(funcion, time, argumentoDefuncion1, arg2)
+// let numero = 10
+// //en la funcion flecha si no hay parametros se deja parentesis vacios
+// let cuentaRegresiva = setInterval(() => {
+//     console.log(`lanzamiento en ${numero} segundo`)
+//     numero--;
+//     if (numero == 0){
+//         clearInterval(cuentaRegresiva)//detener cuenta regresiva  
+//     }
+// }, 1000)
 

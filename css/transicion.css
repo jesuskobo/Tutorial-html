@@ -1,7 +1,21 @@
+/* https://cubic-bezier.com/   para las transicion cubir baser*/
+
+
 .contenedor{
-    background-color: lightskyblue;
+    background-color: red;
     border: 1px solid;
     height: 200px;
     width: 200px;
+    border-radius: 16px;
 
+    transition-property: background-color, height, width;
+    transition-duration: 2000ms, 1000ms, 2000ms; /* primero el colos el segundo es la altura y el tercero es la anchura*/
+    /* transition-timing-function: ease-in; quiere decir que la transiccion al principio es lenta luego rapida*/
+    transition-timing-function: cubic-bezier(.01,1.53,.88,-0.63);
+
+}
+.contenedor:hover{
+    background-color: blueviolet;
+    height: 300px;
+    width: 100%;
 }
